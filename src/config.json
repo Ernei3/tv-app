@@ -1,5 +1,5 @@
 {
     "fetchCongif": {
-        "baseURL": "https://lazybus.tv.nu/programs"
+        "baseURL": " https://stage-api-frontend.tv.nu/programs"
     }
 }

@@ -6,18 +6,15 @@ import './ProgramSlide.styled.css';
 
 const ProgramSlide = ({ programData }) => {
 
-    const { title, playProviders, genreGroups, landscapeImage, imdb } = programData;
+    const { title, playProviders, genres, imageLandscape, imdb } = programData;
 
     return(
         <div>
             <div>{title}</div>
-            <div>{landscapeImage.url}</div>
-            <div>{playProviders.map((provider) => {
-                //console.log(title, provider)
-                return null;
-            })}</div>
-            <div>{genreGroups}</div>
-            <div>{imdb.rating}</div>
+            <div>provider: {playProviders.name}</div>
+            <div>{genres}</div>
+            <div>{imageLandscape}</div>
+            <div>{imdb?.rating}</div>
         </div>
     )
 };

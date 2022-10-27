@@ -3,11 +3,12 @@ import { useEffect } from "react";
 import PropTypes from 'prop-types';
 
 import config from '../../config.json';
-import mockData from '../../mockData.json'
 import './ProgramList.styled.css';
 import { useState } from "react";
 import ErrorScreen from "../ErrorScreen";
 import ProgramSlide from "../ProgramSlide";
+
+const urlExtension = "?orderBy=views&programType="
 
 const ProgramList = ({ categories }) => {
 
@@ -16,31 +17,35 @@ const ProgramList = ({ categories }) => {
 
     useEffect(() => {
 
+      if(categories.length === 0){
+        setProgramsData([]);
+        return;
+      }
+
         const fetchData = async () => {
             try {
-                const response = await fetch(config.fetchCongif.baseURL);
+                const response = await fetch(config.fetchCongif.baseURL + urlExtension + categories.join(","));
               if (!response.ok) {
                 throw new Error(
                   `Bad response from server: ${response.status}`
                 );
               }
-              const data = await response.json();
-              setProgramsData(data);
+              const responseJSON = await response.json();
+              setProgramsData(responseJSON.data);
               setError(null);
             } catch(err) {
               setError(err.message);
-              setProgramsData(mockData.programs);
             } finally {
               // setLoading(false);
             }  
           }
 
           fetchData();
-    }, [])
+    }, [categories])
 
-    // if(error){
-    //     return <ErrorScreen />
-    // }
+    if(error){
+        return <ErrorScreen />
+    }
 
     return (
         <div className="plMain">
