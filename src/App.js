@@ -9,11 +9,12 @@ function App() {
   const [checkedTypes, setCheckedTypes] = useState(['series']);
 
   const handleCheckbox = (event) => {
-    const index = checkedTypes.indexOf(event.target.name);
+    const name = event.target.name
+    const index = checkedTypes.indexOf(name);
     if(index > -1){
-      setCheckedTypes([...checkedTypes.slice(0, index), ...checkedTypes.slice(index+1, checkedTypes.length+1)]);
+      setCheckedTypes(checkedTypes.filter((a) => a !== name))
     } else {
-      setCheckedTypes([...checkedTypes, event.target.name])
+      setCheckedTypes([...checkedTypes, name])
     }
   }
 
