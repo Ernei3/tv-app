@@ -1,0 +1,295 @@
+{
+    "meta": {
+        "status": 200,
+        "pagination": {
+            "page": 1,
+            "perPage": 15,
+            "hasNext": true
+        }
+    },
+    "data": [
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "2",
+            "slug": "no-abras-la-puerta",
+            "programId": "2",
+            "isPlay": false,
+            "title": "No Abras la Puerta",
+            "imagePortrait": "https://new.static.tv.nu/16827241",
+            "imageLandscape": "https://new.static.tv.nu/16827241",
+            "year": 2014,
+            "genres": [
+                "Drama",
+                "Komedi",
+                "Komedi",
+                "Drama",
+                "Romantik"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "3",
+            "slug": "adopta-un-famoso",
+            "programId": "3",
+            "isPlay": false,
+            "title": "Adopta un Famoso",
+            "imagePortrait": "https://new.static.tv.nu/319",
+            "imageLandscape": "https://new.static.tv.nu/318",
+            "year": 2012,
+            "genres": [
+                "Underhållning",
+                "Reality"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "4",
+            "slug": "el-senor-de-la-querencia",
+            "programId": "4",
+            "isPlay": false,
+            "title": "El Señor de la Querencia",
+            "imagePortrait": "https://new.static.tv.nu/16827263",
+            "imageLandscape": "https://new.static.tv.nu/8915733",
+            "year": 2008,
+            "genres": [
+                "Drama",
+                "Drama"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "6",
+            "slug": "la-chucara",
+            "programId": "6",
+            "isPlay": false,
+            "title": "La Chúcara",
+            "imagePortrait": "https://new.static.tv.nu/19189796",
+            "imageLandscape": "https://new.static.tv.nu/19189794",
+            "year": 2014,
+            "genres": [
+                "Drama"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "8",
+            "slug": "mas-que-2-juntos-prendemos-la-tarde",
+            "programId": "8",
+            "isPlay": false,
+            "title": "Más que 2, Juntos Prendemos la Tarde",
+            "imagePortrait": "https://new.static.tv.nu/16827237",
+            "imageLandscape": "https://new.static.tv.nu/8902638",
+            "year": 2014,
+            "genres": [
+                "Underhållning"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "9",
+            "slug": "caleta-del-sol-amor-contra-viento-y-marea",
+            "programId": "9",
+            "isPlay": false,
+            "title": "Caleta del Sol, Amor contra Viento y Marea",
+            "imagePortrait": "https://new.static.tv.nu/16827245",
+            "imageLandscape": "https://new.static.tv.nu/8902640",
+            "year": 2014,
+            "genres": [
+                "Drama",
+                "Romantik"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "13",
+            "slug": "menu",
+            "programId": "13",
+            "isPlay": false,
+            "title": "Menú",
+            "imagePortrait": "https://new.static.tv.nu/16826977",
+            "imageLandscape": "https://new.static.tv.nu/37592253",
+            "year": 2013,
+            "genres": [
+                "Underhållning"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "16",
+            "slug": "zona-d-realizadores-chilenos",
+            "programId": "16",
+            "isPlay": false,
+            "title": "Zona D Realizadores Chilenos",
+            "imagePortrait": "https://new.static.tv.nu/16827259",
+            "imageLandscape": "https://new.static.tv.nu/8915731",
+            "year": 2009,
+            "genres": [
+                "Dokumentär"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "17",
+            "slug": "fruto-del-pais-2004",
+            "programId": "17",
+            "isPlay": false,
+            "title": "Fruto del país",
+            "imagePortrait": "https://new.static.tv.nu/18522900",
+            "imageLandscape": "https://new.static.tv.nu/18522897",
+            "year": 2004,
+            "genres": [
+                "Samhälle",
+                "Dokumentär"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "19",
+            "slug": "la-ruta-de-gengis-kan",
+            "programId": "19",
+            "isPlay": false,
+            "title": "La Ruta de Gengis Kan",
+            "imagePortrait": "https://new.static.tv.nu/79636071",
+            "imageLandscape": "https://new.static.tv.nu/79636069",
+            "year": 2012,
+            "genres": [
+                "Dokumentär",
+                "Äventyr"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "22",
+            "slug": "sesiones-24h",
+            "programId": "22",
+            "isPlay": false,
+            "title": "Sesiones 24H",
+            "imagePortrait": "https://new.static.tv.nu/18855429",
+            "imageLandscape": "https://new.static.tv.nu/18855427",
+            "year": 2013,
+            "genres": [
+                "Underhållning"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "25",
+            "slug": "jugados",
+            "programId": "25",
+            "isPlay": false,
+            "title": "Jugados",
+            "imagePortrait": "https://new.static.tv.nu/16827324",
+            "imageLandscape": "https://new.static.tv.nu/16827327",
+            "year": 2009,
+            "genres": [
+                "Drama"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "27",
+            "slug": "homenaje-cerati",
+            "programId": "27",
+            "isPlay": false,
+            "title": "Homenaje Cerati",
+            "imagePortrait": "https://new.static.tv.nu/16827286",
+            "imageLandscape": "https://new.static.tv.nu/8902642",
+            "year": 2014,
+            "genres": [
+                "Musikal"
+            ],
+            "imdb": null,
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "49",
+            "slug": "the-tonight-show-med-jimmy-fallon",
+            "programId": "49",
+            "isPlay": false,
+            "title": "The Tonight Show med Jimmy Fallon",
+            "imagePortrait": "https://new.static.tv.nu/16827364",
+            "imageLandscape": "https://new.static.tv.nu/106116946",
+            "year": 2014,
+            "genres": [
+                "Komedi"
+            ],
+            "imdb": {
+                "rating": "7.1",
+                "link": "http://www.imdb.com/title/tt3444938/"
+            },
+            "playProviders": []
+        },
+        {
+            "type": "program",
+            "programType": "Serier",
+            "reviews": [],
+            "id": "52",
+            "slug": "one-second-in-f1-racing",
+            "programId": "52",
+            "isPlay": false,
+            "title": "One Second In: F1 Racing",
+            "imagePortrait": "https://new.static.tv.nu/16827282",
+            "imageLandscape": "https://new.static.tv.nu/16827279",
+            "year": 2014,
+            "genres": [
+                "Dokumentär",
+                "Sport"
+            ],
+            "imdb": null,
+            "playProviders": []
+        }
+    ]
+}

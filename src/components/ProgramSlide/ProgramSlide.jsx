@@ -10,11 +10,13 @@ const ProgramSlide = ({ programData }) => {
 
     return(
         <div>
-            <div>{title}</div>
-            <div>provider: {playProviders.name}</div>
-            <div>{genres}</div>
             <div>{imageLandscape}</div>
-            <div>{imdb?.rating}</div>
+            <div>
+                <div>{title}</div>
+                <div>{imdb?.rating}</div>
+            </div>
+            {/* <div>provider: {playProviders.name}</div>
+            <div>{genres}</div> */}
         </div>
     )
 };

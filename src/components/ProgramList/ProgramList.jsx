@@ -3,22 +3,26 @@ import { useEffect } from "react";
 import PropTypes from 'prop-types';
 
 import config from '../../config.json';
-import './ProgramList.styled.css';
+import mockData from '../../mockData.json';
 import { useState } from "react";
 import ErrorScreen from "../ErrorScreen";
 import ProgramSlide from "../ProgramSlide";
 
+import './ProgramList.styled.css';
+
 const urlExtension = "?orderBy=views&programType="
 
-const ProgramList = ({ categories }) => {
+const ProgramList = ({ categories, sortingFunction }) => {
 
+    const [rawData, setRawData] = useState([])
     const [programsData, setProgramsData] = useState([]);
     const [error, setError] = useState(null);
 
     useEffect(() => {
 
       if(categories.length === 0){
-        setProgramsData([]);
+        setRawData([]);
+        setError(null);
         return;
       }
 
@@ -31,10 +35,11 @@ const ProgramList = ({ categories }) => {
                 );
               }
               const responseJSON = await response.json();
-              setProgramsData(responseJSON.data);
+              setRawData(responseJSON.data);
               setError(null);
             } catch(err) {
               setError(err.message);
+              //setRawData(mockData.programs);
             } finally {
               // setLoading(false);
             }  
@@ -43,20 +48,26 @@ const ProgramList = ({ categories }) => {
           fetchData();
     }, [categories])
 
+    useEffect(()=>{
+      if(sortingFunction){
+        setProgramsData([...rawData].sort(sortingFunction))
+      }
+    }, [rawData, sortingFunction])
+
     if(error){
         return <ErrorScreen />
     }
 
     return (
         <div className="plMain">
-            {categories}
             {programsData.map(( program ) => (<ProgramSlide key={program.id} programData={program} />))}
         </div>
     )
 };
 
 ProgramList.propTypes = {
-    categories: PropTypes.arrayOf(PropTypes.oneOf(['series', 'movie'])),
+    categories: PropTypes.arrayOf(PropTypes.string),
+    sortingFunction: PropTypes.func,
 }
 
 export default ProgramList;
