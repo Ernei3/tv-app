@@ -1,0 +1,41 @@
+.psMain {
+    height: 100%;
+    display: flex;
+    flex-grow: 1;
+    gap: 12px;
+    border-top: solid 1px black;
+}
+
+.psImageContainer {
+    min-width: 160px;
+    min-height: 90px;
+    position: relative;
+    background-color: black;
+}
+
+.psImageContainer img {
+    max-width: 160px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+.psData{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 14px;
+}
+
+.psTitle {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.psRating{
+    font-weight: 600;
+}

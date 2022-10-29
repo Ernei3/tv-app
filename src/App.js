@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import ProgramList from './components/ProgramList';
 
-const programTypes = ['series', 'movie'];
+const programTypes = ['series', 'movie',];
 
 const sortByIMDbAsc = (programA, programB) => {
   return (programA.imdb?.rating || 0) - (programB.imdb?.rating || 0)
@@ -41,29 +41,31 @@ function App() {
   }
 
   return (
-    <div className="Main">
-      <div className="CategoriesMenu">
-        <div className="CategoriesMenuTitle">Categories</div>
-        <form>
-          {programTypes.map((programType)=>(
-            <div key={programType}>
-              {
-                checkedTypes.includes(programType)
-                ? <input type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} defaultChecked />
-                : <input type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} />
-              }
-              <label htmlFor={programType}>{programType}</label>
-            </div>
-          ))}
-        </form>
-      </div>
-      <div>
-        <form>
-          <select onChange={handleSortingChange} defaultValue={"imdbDesc"}>
-            <option value="imdbAsc">sort by IMDb ascending</option>
-            <option value="imdbDesc">sort by IMDb descending</option>
-          </select>
-        </form>
+    <div className="main">
+      <div className="menuContainer">
+        <div className="categoriesMenu">
+          <div className="categoriesMenuLabel">Categories:</div>
+          <form className="categoriesMenuForm">
+            {programTypes.map((programType)=>(
+              <div key={programType}>
+                  {
+                    checkedTypes.includes(programType)
+                    ? <input className="categoriesMenuInstance" type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} defaultChecked />
+                    : <input className="categoriesMenuInstance" type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} />
+                  }
+                <label htmlFor={programType}>{programType}</label>
+              </div>
+            ))}
+          </form>
+        </div>
+        <div className="sortingMenu">
+          <form>
+            <select className="sortingSelect" onChange={handleSortingChange} defaultValue={"imdbDesc"}>
+              <option value="imdbAsc">sort by IMDb ascending</option>
+              <option value="imdbDesc">sort by IMDb descending</option>
+            </select>
+          </form>
+        </div>
       </div>
       <ProgramList categories={checkedTypes} sortingFunction={sortingFunction} />
     </div>

@@ -59,7 +59,7 @@ const ProgramList = ({ categories, sortingFunction }) => {
     }
 
     return (
-        <div className="plMain">
+        <div>
             {programsData.map(( program ) => (<ProgramSlide key={program.id} programData={program} />))}
         </div>
     )
