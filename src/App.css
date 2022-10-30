@@ -1,17 +1,14 @@
 .main {
   padding-top: 60px;
+  display: grid;
+  grid-template-columns: 40% [col-start] 60% [col-start];
 }
 
-.menuContainer {
-  margin-bottom: 12px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 12px;
+.categoriesMenu{
+  margin-bottom: 8px;
 }
 
 .categoriesMenuForm {
-  max-width: 160px;
   display: grid;
   grid-template-columns: repeat( auto-fill, minmax(70px, 1fr) );
 }
@@ -26,9 +23,35 @@
   bottom: 1px;
 }
 
+.sortingMenu {
+  margin-bottom: 8px;
+  justify-self: flex-end;
+  align-self: flex-end;
+}
+
 .sortingSelect {
   background-color: white;
   font: inherit;
   padding: 4px 6px;
   font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .main {
+    grid-template-columns: 15% [col-start] 85% [col-start];
+    margin: 0 5%;
+  }
+  .sortingMenu  {
+    grid-column: 1 / span 2;
+  }
+  .categoriesMenu { 
+    grid-row: 2 / span 1;
+    max-height: 50%;
+    padding-top: 15px;
+  }
+  .categoriesMenuForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+  }
 }

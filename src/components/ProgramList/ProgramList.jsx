@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import PropTypes from 'prop-types';
 
 import config from '../../config.json';
-import mockData from '../../mockData.json';
 import { useState } from "react";
 import ErrorScreen from "../ErrorScreen";
 import ProgramSlide from "../ProgramSlide";
@@ -39,9 +38,6 @@ const ProgramList = ({ categories, sortingFunction }) => {
               setError(null);
             } catch(err) {
               setError(err.message);
-              //setRawData(mockData.programs);
-            } finally {
-              // setLoading(false);
             }  
           }
 
@@ -59,7 +55,7 @@ const ProgramList = ({ categories, sortingFunction }) => {
     }
 
     return (
-        <div>
+        <div className="plContainer">
             {programsData.map(( program ) => (<ProgramSlide key={program.id} programData={program} />))}
         </div>
     )

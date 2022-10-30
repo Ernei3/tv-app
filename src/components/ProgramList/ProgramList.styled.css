@@ -1,0 +1,9 @@
+.plContainer {
+    grid-column: 1 / span 2;
+}
+
+@media only screen and (min-width: 768px) {
+    .plContainer {
+        grid-column: 2 / span 1;
+     }
+  }

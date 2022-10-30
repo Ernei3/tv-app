@@ -7,7 +7,7 @@ const ErrorScreen = () => {
 
     return(
         <div>
-            Error
+            We're facing technical difficulties. Please try again later.
         </div>
     )
 };

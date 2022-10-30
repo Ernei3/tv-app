@@ -19,7 +19,7 @@ function App() {
 
   const handleCategoryCheckbox = (event) => {
     const name = event.target.name
-    if(checkedTypes.includes(name)){
+    if (checkedTypes.includes(name)) {
       setCheckedTypes(checkedTypes.filter((a) => a !== name))
     } else {
       setCheckedTypes([...checkedTypes, name])
@@ -28,7 +28,7 @@ function App() {
 
   const handleSortingChange = (event) => {
     const sortingType = event.target.value;
-    switch(sortingType){
+    switch (sortingType) {
       case "imdbAsc":
         setSortingFunction(() => sortByIMDbAsc);
         break;
@@ -42,30 +42,28 @@ function App() {
 
   return (
     <div className="main">
-      <div className="menuContainer">
-        <div className="categoriesMenu">
-          <div className="categoriesMenuLabel">Categories:</div>
-          <form className="categoriesMenuForm">
-            {programTypes.map((programType)=>(
-              <div key={programType}>
-                  {
-                    checkedTypes.includes(programType)
-                    ? <input className="categoriesMenuInstance" type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} defaultChecked />
-                    : <input className="categoriesMenuInstance" type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} />
-                  }
-                <label htmlFor={programType}>{programType}</label>
-              </div>
-            ))}
-          </form>
-        </div>
-        <div className="sortingMenu">
-          <form>
-            <select className="sortingSelect" onChange={handleSortingChange} defaultValue={"imdbDesc"}>
-              <option value="imdbAsc">sort by IMDb ascending</option>
-              <option value="imdbDesc">sort by IMDb descending</option>
-            </select>
-          </form>
-        </div>
+      <div className="categoriesMenu">
+        <div className="categoriesMenuLabel">Categories:</div>
+        <form className="categoriesMenuForm">
+          {programTypes.map((programType) => (
+            <div key={programType}>
+              {
+                checkedTypes.includes(programType)
+                  ? <input className="categoriesMenuInstance" type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} defaultChecked />
+                  : <input className="categoriesMenuInstance" type="checkbox" id={programType} name={programType} onChange={handleCategoryCheckbox} />
+              }
+              <label htmlFor={programType}>{programType}</label>
+            </div>
+          ))}
+        </form>
+      </div>
+      <div className="sortingMenu">
+        <form>
+          <select className="sortingSelect" onChange={handleSortingChange} defaultValue={"imdbDesc"}>
+            <option value="imdbAsc">sort by IMDb ascending</option>
+            <option value="imdbDesc">sort by IMDb descending</option>
+          </select>
+        </form>
       </div>
       <ProgramList categories={checkedTypes} sortingFunction={sortingFunction} />
     </div>
